@@ -13,3 +13,7 @@ class ReadConfig_Login():
     @staticmethod
     def getUserName(self):
         return config.get("Login Details", "username")
+
+    @staticmethod
+    def getPassword(self):
+        return config.get("Login Details", "password")
