@@ -15,7 +15,7 @@ class ProductsPage:
         self.driver = driver
 
     #verify cart page
-    def verifyCartPage(self, username):
+    def verifyCartPage(self):
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.visibility_of_element_located((By.XPATH, self.cartText_Xpath_id)))
         element.isDisplayed()

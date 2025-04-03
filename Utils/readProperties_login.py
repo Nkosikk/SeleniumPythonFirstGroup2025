@@ -15,3 +15,15 @@ class ReadConfig_Log():
     @staticmethod
     def getLastName():
         return config.get("Login Details", "url")
+
+    @staticmethod
+    def getFirstName():
+        return config.get("Form Details", "url")
+
+    @staticmethod
+    def getLastName():
+        return config.get("Form Details", "url")
+
+    @staticmethod
+    def getZipCode():
+        return config.get("Form Details", "url")
