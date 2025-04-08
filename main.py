@@ -14,6 +14,7 @@ driver.find_element(By.XPATH, "//*[@id='header_container']/div[2]/span").is_disp
 
 ProductText = driver.find_element(By.XPATH, "//*[@id='header_container']/div[2]/span").text
 addToCartButton = driver.find_element(By.ID, "add-to-cart-sauce-labs-backpack")
+clickCart = driver.find_element(By.XPATH, "//*[@id='shopping_cart_container']/a")
 
 if ProductText=="Products":
     print(" Test has passed")
