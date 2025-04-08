@@ -13,6 +13,7 @@ driver.find_element(By.ID, "login-button").click()
 driver.find_element(By.XPATH, "//*[@id='header_container']/div[2]/span").is_displayed()
 
 ProductText = driver.find_element(By.XPATH, "//*[@id='header_container']/div[2]/span").text
+addToCartButton = driver.find_element(By.ID, "add-to-cart-sauce-labs-backpack")
 
 if ProductText=="Products":
     print(" Test has passed")
