@@ -34,14 +34,33 @@ driver.find_element(By.ID, "first-name").send_keys("Linda")
 driver.find_element(By.ID, "last-name").send_keys("Ntanjana")
 driver.find_element(By.ID, "postal-code").send_keys("7850")
 driver.find_element(By.XPATH, "//input[@id='continue']").click()
-ProductText = driver.find_element(By.XPATH, "//span[@class='title'][contains(.,'Checkout: Overview')]").text
-if ProductText=="Checkout: Overview":
-    print(" Test has passed")
+##ProductText = driver.find_element(By.XPATH, "//span[@class='title'][contains(.,'Checkout: Overview')]").text
+##if ProductText=="Checkout: Overview":
+ ##   print(" Test has passed")
+ ##   assert True
+##else:
+ ##   print(" Test has Failed")
+ ##   assert False
+
+itemTotalText =driver.find_element(By.XPATH, "//*[@id=checkout_summary_container]/div/div[2]/div[6]")
+itemTotalExtracted = itemTotalText.replace("Item total: $", "")
+itemTotal = float(itemTotalExtracted)
+
+TotalText = driver.find_element(By.XPATH, "//*[@id=checkout_summary_container]/div/div[2]/div[7]")
+TotalExtracted = TotalText.replace("Total: $", "")
+Total = float(TotalExtracted)
+
+if itemTotal + 8 == Total:
+    print(" correct amount")
     assert True
 else:
-    print(" Test has Failed")
+    print(" incorrect amount")
     assert False
+
+
+
 driver.find_element(By.XPATH, "//button[@id='finish']").click()
+
 
 
 time.sleep(5)
