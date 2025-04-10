@@ -2,6 +2,7 @@ import time
 
 from selenium import webdriver
 
+
 def setup(browser):
     if browser.lower() == 'chrome':
         driver = webdriver.Chrome()
@@ -14,5 +15,9 @@ def setup(browser):
         driver = webdriver.Safari()
     return driver
 
-setup("edge")
 
+def pytest_adoption(parser):
+    parser.addoption("--browser")
+
+def browser(request):
+    return request.config.getoption("--browser")
