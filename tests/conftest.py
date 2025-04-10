@@ -3,6 +3,7 @@ import time
 import pytest
 from selenium import webdriver
 
+
 @pytest.fixture
 def setup(browser):
     if browser.lower() == 'chrome':
@@ -17,9 +18,10 @@ def setup(browser):
     return driver
 
 
-def pytest_adoption(parser):
+def pytest_addoption(parser):
     parser.addoption("--browser")
 
-@pytest.fixture
+
+@pytest.fixture()
 def browser(request):
     return request.config.getoption("--browser")
