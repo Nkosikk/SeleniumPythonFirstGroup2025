@@ -1,0 +1,1 @@
+allure serve /Users/nkosicele/Documents/NewCLassProject/SeleniumPythonFirstGroup2025/allure-results
