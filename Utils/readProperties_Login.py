@@ -7,13 +7,13 @@ config.read("./Configurations/Login.ini")
 class ReadConfig_Login():
 
     @staticmethod
-    def getUrl():
+    def geturl():
         return config.get("Common Details", "url")
 
     @staticmethod
-    def getUserName():
+    def getuserName():
         return config.get("Login Details", "username")
 
     @staticmethod
-    def getPassword():
+    def getpassWord():
         return config.get("Login Details", "password")
