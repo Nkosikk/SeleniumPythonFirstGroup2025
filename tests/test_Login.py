@@ -1,5 +1,4 @@
 import pytest
-import self
 
 from Utils.readProperties_Login import ReadConfig_Login
 

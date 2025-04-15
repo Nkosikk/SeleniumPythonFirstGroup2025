@@ -17,8 +17,8 @@ class LandingPage:
         element.isDisplayed()
 
     def clickAddToCart(self):
-     element = self.driver.find_element(By.ID, self.button_addToCart_id)
-     element.click()
+        element = self.driver.find_element(By.ID, self.button_addToCart_id)
+        element.click()
 
     def verifyAddToCart(self):
         element = self.driver.find_element(By.XPATH, self.button_cart_xpath)
