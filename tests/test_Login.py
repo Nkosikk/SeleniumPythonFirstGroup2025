@@ -17,6 +17,7 @@ class Test_SauceDemo:
 
     @allure.severity(allure.severity_level.CRITICAL)
     @pytest.mark.sanity
+    @pytest.mark.order(2)
     @pytest.mark.success
     def test_verifySuccessfulloginToSauceDemo(self, setup):
         self.driver = setup
@@ -35,6 +36,7 @@ class Test_SauceDemo:
 
     @allure.severity(allure.severity_level.CRITICAL)
     @pytest.mark.sanity
+    @pytest.mark.order(1)
     @pytest.mark.unsuccessful
     def test_verifyUnSuccessfulloginToSauceDemo(self, setup):
         self.driver = setup
