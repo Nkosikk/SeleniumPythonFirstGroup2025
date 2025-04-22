@@ -3,11 +3,11 @@ import pytest
 
 from Pages.landingPage import LandingPage
 from Pages.loginPage import LoginPage
-from Tests import test_Login
+from tests import test_Login
 from Utils.readProperties_Login import ReadConfig_Login
 
 
-class Test_landingpage:
+class tests_landingpage:
     url = ReadConfig_Login().getUrl()
     username = ReadConfig_Login().getUserName()
     password = ReadConfig_Login().getPassword()
