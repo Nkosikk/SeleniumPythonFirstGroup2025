@@ -14,7 +14,7 @@ class LandingPage:
     def verifyProductText(self):
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.visibility_of_element_located((By.XPATH, self.title_ProductText_xpath)))
-        element.isDisplayed()
+        element.is_displayed()
 
     def clickAddToCart(self):
      element = self.driver.find_element(By.ID, self.button_addToCart_id)
