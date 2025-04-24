@@ -21,17 +21,12 @@ class Test_SauceDemo:
         self.driver.maximize_window()
         self.login=LoginPage(self.driver)
         self.login.enterUsername(self.username)
-
-
-        allure.attach(self.driver.get_screenshot_as_png(), name="login Page", attachment_type=allure.attachment_type.PNG)
+        self.login.enterPassword(self.password)
+        allure.attach(self.driver.get_screenshot_as_png(), name="Login Page",
+                      attachment_type=allure.attachment_type.PNG)
+        self.login.clickLogin()
 
 
         time.sleep(2)
-
-
-
-
-
-
 
         self.driver.quit()
