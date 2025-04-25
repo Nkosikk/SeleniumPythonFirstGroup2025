@@ -8,6 +8,7 @@ class LoginPage:
     textBox_password_id = "password"
     button_login_id = "login-button"
 
+
     def __init__(self, driver):
         self.driver = driver
 
