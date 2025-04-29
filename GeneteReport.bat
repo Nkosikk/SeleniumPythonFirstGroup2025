@@ -1,1 +1,1 @@
-allure serve /Users/nkosicele/Documents/NewCLassProject/SeleniumPythonFirstGroup2025/allure-results
+allure serve C:\Users\Itumeleng Morei\Downloads\AutomationProject\SeleniumPythonFirstGroup2025\allure-results
